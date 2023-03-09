@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="sp">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modulos</title>
+    <script src="app.js" type="module" defer></script>
+</head>
+<body>
+    <h1>Standard Grading System </h1>
+    <form id="myForm">
+        <label class="my-2 d-block">Escoja su tipo de nota</label>
+        <label>Taditional</label>
+        <input type="radio" name="eleccion" value="Taditional">
+        <label>SBG-Rating</label>
+        <input type="radio" name="eleccion" value="SBG-Rating"><br>
+        <input type="number" name="numero" pattern="[0-9]+" placeholder="Ingrese su numero">
+        <input type="submit" value="enviar">
+    </form>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Traditional</th>
+                <th>PointRange</th>
+                <th>Letter</th>
+                <th>SBGRating</th>
+                <th>ProficiencyLevelWithStandard</th>
+            </tr>
+        </thead>
+        <tbody id="myTabla">
+        </tbody>
+    </table>
+</body>
+</html>
