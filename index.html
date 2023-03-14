@@ -6,31 +6,49 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Modulos</title>
     <script src="app.js" type="module" defer></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+    crossorigin="anonymous"></script>
 </head>
 <body>
-    <h1>Standard Grading System </h1>
+
+  <p class="h2 text-center my-3">Standard Grading System</p>
+
     <form id="myForm">
-        <label class="my-2 d-block">Escoja su tipo de nota</label>
-        <label>Taditional</label>
-        <input type="radio" name="eleccion" value="Taditional">
-        <label>SBG-Rating</label>
-        <input type="radio" name="eleccion" value="SBG-Rating"><br>
-        <input type="number" name="numero" pattern="[0-9]+" placeholder="Ingrese su numero">
-        <input type="submit" value="enviar">
+      <label>Escoja su tipo de nota:</label><br>
+      <div class="form-check form-check-inline">
+          <label>Traditional</label>
+          <input class="form-check-input" type="radio" name="eleccion" value="Traditional" checked>
+        </div>
+        <div class="form-check form-check-inline"> 
+          <label>SBG-Rating</label>
+          <input class="form-check-input" type="radio" name="eleccion" value="SBG-Rating"><br>
+        </div>
+        <div class="form-group">
+          <input type="number" name="numero" pattern="[0-9]+" placeholder="Ingrese su calificación" required>
+          <input type="submit" value="enviar" class="btn btn-primary py-1 px-2">
+        </div>
     </form>
 
-    <table>
-        <thead>
+    <table class="table mt-5">
+        <thead class="thead-dark">
             <tr>
-                <th>Traditional</th>
-                <th>PointRange</th>
-                <th>Letter</th>
-                <th>SBGRating</th>
-                <th>ProficiencyLevelWithStandard</th>
+                <th scope="col">Traditional</th>
+                <th scope="col">PointRange</th>
+                <th scope="col">Letter</th>
+                <th scope="col">SBGRating</th>
+                <th scope="col">Proficiency Level With Standard</th>
             </tr>
         </thead>
         <tbody id="myTabla">
         </tbody>
     </table>
+
+    <button type="button" class="btn btn-dark ms-2 mt-4" id="close">Limpiar</button>
+
+
 </body>
 </html>
